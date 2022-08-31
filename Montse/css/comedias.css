@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*HEADER BONITO*/ 
+header{
+    width: 100%;
+    height: 500px;
+    background: #8E0E00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1f1c1883, #8e0e0073), url(../img/comediaportada.jpg); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,  #1f1c1883, #8e0e0073), url(../img/comediaportada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* NAVEGACION */ 
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:beige;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.textos-header h1{
+    height: 300px;
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.textos-header h2{
+    font-size: 35px;
+    font-weight: 300;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn .btn-outline-light{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* MENU */
+
+.menu{
+    float: right;
+    line-height: 65px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu a{
+    display: block;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 500ms ease;
+
+}
+.menu a:hover{
+    background:  #dd181898;
+    color: #fff;
+}
+.menu .submenu{
+    background: rgb(0, 0, 0);
+    box-shadow: 3px 10px 10px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1;
+}
+.menu .submenu li a{
+    line-height: 50px;
+}
+.menu ul li a:hover + ul, .menu .submenu:hover{
+    display: block;
+}
+
+/* PRODUCTOS */
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;
+    margin: auto;*/
+}
+
+/* CARTAS */
+
+ .card{
+     position: relative;
+     width: 200px;
+     height: 320px;
+     margin: 10px;
+     margin-bottom: 10px;
+ } 
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+/* CAJAS MARCO */
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgb(255, 0, 0);
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.836);
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Abril Fatface';
+}
+/* CAJAS */
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back h3{
+    font-size: 25px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-family: 'Dancing Script';
+}
+
+.card .back p{
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: 'Marcellus', serif;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* PAGINACION */ 
+
+.container .paginacion{
+    margin: 35px 429px;
+}
+
+.container .paginacion ul{
+    list-style: none;
+    text-align: center
+}
+
+.container .paginacion ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container .paginacion ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+    background: rgb(245, 143, 236); 
+    text-decoration
+    
+    : none;
+}
+
+.container .paginacion ul li .activo{
+    background-color: rgb(250, 177, 244);
+    font-weight: bold;
+}
+
+

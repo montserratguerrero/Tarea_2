@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #3f3f3f;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: 'Cinzel', serif;
+}
+
+/*HEADER BONITO*/ 
+header{
+    width: 100%;
+    height: 550px;
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #db0000ab, #00000091), url(../img/fondo1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #db000041, #00000067), url(../img/fondo1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* MENU */
+.menu{
+    float: right;
+    line-height: 65px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu a{
+    display: block;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 500ms ease;
+
+}
+.menu a:hover{
+    background:  #dd181898;
+    color: #fff;
+}
+.menu .submenu{
+    background: rgb(0, 0, 0);
+    box-shadow: 3px 10px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+.menu .submenu li a{
+    line-height: 50px;
+    font-family: 'Caveat', cursive;
+}
+.menu ul li a:hover + ul, .menu .submenu:hover{
+    display: block;
+}
+
+
+/* GALERIA PADRIURIX */ 
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 35%;
+    height: 180px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(187, 7%, 77%, 0.822);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* footer */
+
+footer{
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd181898, #33333391), url(../img/negro.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #dd181898, #33333391), url(../img/negro.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 100px 0 75px 0;;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+.content-foo h4{
+    color: #ccc;
+    font-family: 'Caveat', cursive;
+}
+
+.content-foo p{
+    color: #ccc;
+    font-size: 20px;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    color: #ccc;
+}
